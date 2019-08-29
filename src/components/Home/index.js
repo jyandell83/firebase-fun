@@ -6,7 +6,6 @@ const Home = () =>  (
     <FirebaseContext.Consumer>
         {
             firebase => {
-            firebase.doCreateUserWithEmailAndPassword('jeremadsfsdafy@jeremyadsfads.com', 'aaabbbccc')
             console.log(firebase)
             return <div>This is firebase and stuff</div>
             }
