@@ -12,11 +12,12 @@ class SignUpForm extends Component  {
         username: '',
         email: '',
         passwordOne: '',
-        passwordTwo: '',
-        error: null
+        passwordTwo: ''
+        // error: null
     }
-    onSubmit = event => {
-
+    onSubmit = e => {
+        e.preventDefault();
+        
     }
     onChange = e => {
         this.setState({
@@ -28,8 +29,8 @@ class SignUpForm extends Component  {
             username,
             email,
             passwordOne,
-            passwordTwo,
-            error
+            passwordTwo
+            // error
         } = this.state
 
         const isInvalid = 

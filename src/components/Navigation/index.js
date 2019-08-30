@@ -1,28 +1,38 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom';
+
+import { NavContainer,
+        NavRow,
+        Link,
+        NavUl
+        } from './style';
 
 import * as ROUTES from '../../constants/routes'
 
 const Navigation = () =>  (
-    <div>
-        <ul>
-            <li>
-                <NavLink to = {ROUTES.SIGN_IN}>Sign In</NavLink>
-            </li>
-            <li>
-                <NavLink to = {ROUTES.LANDING}>Landing</NavLink>
-            </li>
-            <li>
-                <NavLink to = {ROUTES.HOME}>Home</NavLink>
-            </li>
-            <li>
-                <NavLink to = {ROUTES.ACCOUNT}>Account</NavLink>
-            </li>
-            <li>
-                <NavLink to = {ROUTES.ADMIN}>Admin</NavLink>
-            </li>
-        </ul>
-    </div>
+    <NavContainer>
+        <NavRow>
+            <NavUl>
+                <li>
+                    <Link to = {ROUTES.SIGN_IN}>Sign In</Link>
+                </li>
+                <li>
+                    <Link to = {ROUTES.SIGN_UP}>Sign Up</Link>
+                </li>
+                <li>
+                    <Link exact to = {ROUTES.LANDING}>Landing</Link>
+                </li>
+                <li>
+                    <Link to = {ROUTES.HOME}>Home</Link>
+                </li>
+                <li>
+                    <Link to = {ROUTES.ACCOUNT}>Account</Link>
+                </li>
+                <li>
+                    <Link to = {ROUTES.ADMIN}>Admin</Link>
+                </li>
+            </NavUl>
+        </NavRow>
+    </NavContainer>
 )
 
 export default Navigation;
